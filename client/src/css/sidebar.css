@@ -1,0 +1,103 @@
+/* SIDEBAR */
+.sidebar{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: auto;
+  width: 70px;
+  background-color: var(--cor2);
+  box-shadow: 10px 0 0 var(--cor1);
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 2;
+}
+.sidebar:hover{
+  width: 300px;
+}
+.sidebar ul{
+  position: absolute;
+  top: 200px;
+  left: 0;
+  width: 100%;
+  padding-left: 5px;
+}
+.sidebar ul li{
+  position: relative;
+  list-style: none;
+  width: 100%;
+  border-top-left-radius: 20px;
+}
+.sidebar ul li a{
+  position: relative;
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+}
+.sidebar .iconeSidebar{
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 70px;
+}
+.sidebar .iconeSidebar ion-icon{
+  position: relative;
+  font-size: 1.5rem;
+  z-index: 1;
+}
+.sidebar .tituloSidebar{
+  position: relative;
+  display: block;
+  padding-left: 10px;
+  height: 60px;
+  line-height: 60px;
+  white-space: nowrap;
+}
+.sidebar .active{
+  background: var(--cor1);
+}
+.perfilUsuario{
+  position: relative;
+  top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fotoUsuario{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  transition: 0.6s;
+}
+.sidebar:hover .fotoUsuario{
+  width: 100px;
+  height: 100px;
+}
+.sidebar:hover .nomeUsuario,
+.sidebar:hover .funcaoUsuario{
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0s linear;
+}
+.nomeUsuario{
+  color: #fff;
+  font-size: 20px;
+  margin-top: 6px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0s linear;
+}
+.funcaoUsuario{
+  color: #fff;
+  font-size: 15px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0s linear;
+}
+/* FIM SIDEBAR */
