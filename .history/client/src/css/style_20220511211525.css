@@ -1,0 +1,453 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+:root{
+  --cor1: #099c22;
+  --cor2: #424242;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+.container{
+  max-width: calc(100% - 80px);
+  padding: 0 15px;
+  margin: 0 auto 0 80px;
+}
+.nomePagina{
+  padding: 8px 0;
+  margin-bottom: 15px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tituloPagina{
+  color: var(--cor2);
+  font-size: 30px;
+}
+.mostrarEstatisticas{
+  color: var(--cor2);
+  font-size: 30px;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+.flexBox{
+  display: flex;
+}
+.flexRow{
+  flex-direction: row;
+}
+/* SIDEBAR */
+.sidebar{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: auto;
+  width: 70px;
+  background-color: var(--cor2);
+  box-shadow: 10px 0 0 var(--cor1);
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 2;
+}
+.sidebar:hover{
+  width: 300px;
+}
+.sidebar ul{
+  position: absolute;
+  top: 200px;
+  left: 0;
+  width: 100%;
+  padding-left: 5px;
+}
+.sidebar ul li{
+  position: relative;
+  list-style: none;
+  width: 100%;
+  border-top-left-radius: 20px;
+}
+.sidebar ul li a{
+  position: relative;
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+}
+.sidebar .iconeSidebar{
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 70px;
+}
+.sidebar .iconeSidebar ion-icon{
+  position: relative;
+  font-size: 1.5rem;
+  z-index: 1;
+}
+.sidebar .tituloSidebar{
+  position: relative;
+  display: block;
+  padding-left: 10px;
+  height: 60px;
+  line-height: 60px;
+  white-space: nowrap;
+}
+.sidebar .active{
+  background: var(--cor1);
+}
+.perfilUsuario{
+  position: relative;
+  top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fotoUsuario{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  transition: 0.6s;
+}
+.sidebar:hover .fotoUsuario{
+  width: 100px;
+  height: 100px;
+}
+.sidebar:hover .nomeUsuario,
+.sidebar:hover .funcaoUsuario{
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0s linear;
+}
+.nomeUsuario{
+  color: #fff;
+  font-size: 20px;
+  margin-top: 6px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0s linear;
+}
+.funcaoUsuario{
+  color: #fff;
+  font-size: 15px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0s linear;
+}
+/* FIM SIDEBAR */
+
+/* DASHBOARD */
+.areaBlocosEstatisticas{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  gap: 20px;
+  flex-direction: row;
+}
+@media(max-width: 1064px){
+  .areaBlocosEstatisticas{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media(max-width: 651px){
+  .areaBlocosEstatisticas{
+    grid-template-columns: 1fr;
+  }
+}
+.blocoEstatistica{
+  width: auto;
+  height: 150px;
+  background: var(--cor2);
+  color: #fff;
+  border-bottom: 3px solid var(--cor1);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+}
+.tituloEstatistica{
+  font-size: 25px;
+  text-transform: capitalize;
+}
+.conteudoEstatistica{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 25px;
+}
+.iconeEstatistica{
+  width: 85px;
+  font-size: 50px;
+  z-index: 0;
+}
+.dadosEstatistica{
+  text-align: center;
+  width: 100%;
+  font-size: 60px;
+  color: #fff;
+}
+.exibirMenu{
+  margin-top: -1000px !important;
+  transition: .3s;
+}
+.rotacionarBtn{
+  transform: rotate(180deg);
+  transition: .7s ease-in;
+}
+/* FIM DASHBOARD */
+
+/* LOGIN */
+#bgAreaLogin{
+  background: rgb(9,156,34);
+  background: linear-gradient(0deg, rgba(9,156,34,1) 0%, rgba(66,66,66,1) 100%);
+  width: 100%;
+  height: 100vh;
+}
+#areaLogin{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto auto;
+  width: 350px;
+  height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  background-color: #fff;
+}
+.formLogin{
+  padding: 15px 45px ;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+#areaLogin input{
+  /* border-top: 0 none;
+  border-right: 0 none;
+  border-left: 0 none;
+  border-color: var(--cor1); */
+  border: 0 none;
+  background: #42424255;
+  color: var(--cor2);
+  border-radius: 20px;
+  padding: 8px 12px;
+  font-size: 15px;
+  width: calc(100% - 24px);
+}
+#areaLogin input::placeholder{
+  color: #fff;
+}
+#areaLogin input:focus{
+  outline: none;
+}
+.btnLogar{
+  width: 100% !important;
+  background-color: var(--cor2) !important;
+  transition: .3s;
+  color: #fff !important;
+}
+.btnLogar:hover{
+  background-color: var(--cor1) !important;
+  color: #fff !important;
+  cursor: pointer;
+}
+.esqueciASenha{
+  font-size: 13px;
+  color: var(--cor2);
+  text-decoration: none;
+}
+.esqueciASenha:hover{
+  color: inherit;
+}
+
+/* FIM LOGIN */
+
+
+/* INPUTS */
+input:focus{
+  outline: 0;
+}
+.formEdicao input{
+  border-top: 0 none;
+  border-right: 0 none;
+  border-left: 0 none;
+  border-bottom: 2px solid var(--cor2);
+  padding: 0 5px 2px;
+  font-size: 15px;
+  transition: 0.3s;
+  width: 100%;
+}
+.formEdicao input:focus{
+  border-color: var(--cor1);
+}
+/* FIM INPUTS */
+
+#headerArea{
+  height: 50px;
+  width: 100%;
+  color: #fff;
+  text-align: right;
+  padding: 10px 0;
+}
+#headerArea .tituloPagina{
+  position: relative;
+  height: 100%;
+}
+#headerArea h3{
+  color: var(--cor2);
+  background-color: #fff;
+  position: absolute;
+  width: min-content;
+  right: 0;
+  font-size: 25px;
+  z-index: 10;
+  padding-left: 10px;
+}
+#headerArea .tituloPagina::after{
+  content: '';
+  background-color: var(--cor2);
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 32px;  
+  z-index: 1;
+}
+
+/* PAGINA DE ERRO */
+#errorPage{
+  width: 100%;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.inputsConversao{
+  border: 1px solid #aaa8a8;
+  border-radius: 3px;
+  width: 350px;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+}
+.tituloInput{
+  margin-bottom: 3px;
+}
+#gridLotes{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.boxLote{
+  padding: 5px;
+  text-align: left;
+  
+  color: #fff;
+}
+.loteFechado{
+  background-color: rgb(230, 91, 109);
+}
+.loteAberto{
+  background-color: rgb(36, 133, 189);
+}
+.boxConversao{
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+.flexChild100{
+  width: 100%;
+  padding: 15px;
+}
+
+.areaEdicaoSite {  
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: 
+    ". menuPaginasEdicao menuPaginasEdicao menuPaginasEdicao"
+    "menuItensEdicao formEdicao formEdicao formEdicao"
+    "menuItensEdicao formEdicao formEdicao formEdicao"; 
+}
+
+.menuPaginasEdicao { 
+  grid-area: menuPaginasEdicao;
+  background-color: var(--cor1);
+  display: flex;
+  flex-direction: row;
+  gap: 1px;
+  justify-content: center;
+}
+.menuPaginasEdicao div{
+  width: 100%;
+  background-color: var(--cor2);
+  padding: 8px 0;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+.menuPaginasEdicao div:hover{
+  background-color: var(--cor1);
+}
+
+.formEdicao { 
+  grid-area: formEdicao; 
+}
+
+.menuItensEdicao { 
+  grid-area: menuItensEdicao;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cor1);
+}
+.menuItensEdicao div{
+  background-color: var(--cor2);
+  padding: 8px 12px;
+  text-align: left;
+  color: #fff;
+  cursor: pointer;
+}
+.menuItensEdicao div:hover{
+  background-color: var(--cor1);
+}
+
+/* FORMULARIOS */
+.boxForm{
+  padding: 50px
+}
+#inputFile input{
+  display: none;
+}
+#inputFile label{
+  color: #fff;
+  width: 300px;
+  height: 30px;
+  background-color: var(--cor2);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
