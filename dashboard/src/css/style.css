@@ -99,7 +99,9 @@ body{
 .searchArea input:focus{
   outline: none;
 }
-
+.header{
+  margin-bottom: 16px;
+}
 .linkHeader{
   width: 40px;
   height: 40px;
@@ -313,7 +315,7 @@ body{
 }
 
 /* Profile */
-#profileBox, #tasksBox{
+#profileBox, #tasksBox, #siteSections{
   width: 100%;
   background-color: var(--gray);
   border-radius: 16px;
@@ -325,7 +327,7 @@ body{
   overflow: hidden;
   transition: max-height 1s ease-in-out;
 }
-.headerProfile, .headerTasks{
+.headerProfile, .headerTasks, .headerSiteSections{
   width: 100%;
   height: 50px;
   padding: 8px 16px;
@@ -336,7 +338,7 @@ body{
   justify-content: space-between;
   align-items: center;
 }
-.headerProfile p, .headerTasks p{
+.headerProfile p, .headerTasks p, .headerSiteSections p{
   margin: 0;
   color: var(--whiteTxt);
   font-weight: 500;
@@ -362,7 +364,7 @@ body{
 .arrowInherit{
   transform: inherit !important;
 }
-.contentProfile, .contentTasks{
+.contentProfile, .contentTasks, .contentSiteSections{
   background-color: var(--gray);
   padding: 16px;
   border-radius: 16px;
@@ -530,4 +532,112 @@ body{
 }
 .modalAddTask input:focus{
   outline: none;
+}
+
+/* Site */
+#siteContent{
+  width: 100%;
+  padding: 72px 24px 24px;
+  position: relative;
+  background-color: var(--wGray);
+  /* border-radius: 16px; */
+}
+.headerSite{
+  width: 100%;
+  background-color: var(--gray);
+  padding: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.menuPaginasSite{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+.menuPaginasSite li{
+  list-style-type: none;
+  color: var(--whiteTxt);
+  width: max-content;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.inputField{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: space-between;
+  align-items: left;
+}
+.inputField p{
+  margin: 0;
+  padding: 0;
+  color: var(--whiteTxt);
+}
+.inputField input{
+  background-color: var(--wGray);
+  border-radius: 12px;
+  border: 0 none;
+  padding: 2px 8px;
+  color: var(--whiteTxt);
+}
+.inputField input:focus{
+  outline: 0;
+}
+
+.bgPagina{
+  background-color: var(--gray);
+  border-radius: 16px;
+  padding: 24px;
+}
+.pageTitle{
+  width: 100%;
+  margin-bottom: 16px;
+}
+.pageTitle h1{
+  color: var(--whiteTxt);
+  font-size: 24px;
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
+.pageTitle p{
+  color: var(--subText);
+  margin: 0;
+  font-size: 13px;
+}
+
+.inputsCadastroGranja{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 12px;
+}
+
+.inputFoto{
+  width: 100%;
+  background-color: transparent;
+  padding-top: 100%;
+  position: relative;
+  border: solid 2px var(--wGray);
+  cursor: pointer;
+}
+.inputFoto input{
+  display: none;
+}
+.inputFoto img{
+  width: 80px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.btnAdd{
+  align-self: end;
 }
