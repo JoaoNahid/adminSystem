@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DropdownBox from './dropdownBox';
 
 function Profile() {
   const [open, setOpen] = useState(true)
@@ -11,46 +12,36 @@ function Profile() {
   }
 
   return ( 
-    <div id="profileBox">
-      <div className="headerProfile">
-        <p>My profile</p>
-        <div className="toggleDropdown" onClick={() => toggleDropdown()}>
-          <img id="arrowProfile" src="./img/next.png" alt="" />
+    <DropdownBox title="My profile">
+      <div className="aboutProfile">
+        <div className="avatar" style={{background: "url(./img/avatar.png)"}}></div>
+        <div className="informations">
+          <h3>João Nahid</h3>
+          <span>Developer</span>
+          <div className="city">
+            <img src="./img/pin.png" alt="" />
+            <span>Pouso Alegre, MG</span>
+          </div>
         </div>
       </div>
-      <div className="contentProfile">
 
-        <div className="aboutProfile">
-          <div className="avatar" style={{background: "url(./img/avatar.png)"}}></div>
-          <div className="informations">
-            <h3>João Nahid</h3>
-            <span>Developer</span>
-            <div className="city">
-              <img src="./img/pin.png" alt="" />
-              <span>Pouso Alegre, MG</span>
-            </div>
-          </div>
+      <div className="moreInformationsAbout">
+        <div className="itemMoreInformation">
+          <span>Status</span>
+          <p>Trabalhando</p>
         </div>
 
-        <div className="moreInformationsAbout">
-          <div className="itemMoreInformation">
-            <span>Status</span>
-            <p>Trabalhando</p>
-          </div>
-
-          <div className="itemMoreInformation">
-            <span>Empresa</span>
-            <p>Webtagger</p>
-          </div>
-
-          <div className="itemMoreInformation">
-            <span>Contratação</span>
-            <p>PJ / CLT</p>
-          </div>
+        <div className="itemMoreInformation">
+          <span>Empresa</span>
+          <p>Webtagger</p>
         </div>
 
+        <div className="itemMoreInformation">
+          <span>Contratação</span>
+          <p>PJ / CLT</p>
+        </div>
       </div>
-    </div>
+    </DropdownBox>
    );
 }
 

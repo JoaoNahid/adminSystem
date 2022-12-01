@@ -1,31 +1,18 @@
 import React, { useState } from 'react';
+import Dashboard from '../pages/dashboard';
+import DropdownBox from './dropdownBox';
 import ModalAddTask from './modalAddTask';
 import Task from './task';
 
 function Tasks() {
   const [openModal, setOpenModal] = useState(false)
 
-  const toggleDropdown = () => {    
-    let arrow = document.getElementById('arrowProfile')
-    let item = document.getElementById('tasksBox')
-    item.classList.toggle('closedProfile')
-    arrow.classList.toggle('arrowInherit')
-  }
-
   const handleFilter = (e) => {
     e.currentTarget.classList.toggle('bgBlue')
   }
 
   return ( 
-    <div id="tasksBox">
-      <div className="headerTasks">
-        <p>Tasks</p>
-        <div className="toggleDropdown" onClick={() => toggleDropdown()}>
-          <img id="arrowProfile" src="./img/next.png" alt="" />
-        </div>
-      </div>
-
-      <div className="contentTasks">
+    <DropdownBox title="Tasks" id="Tasks">
         {
           openModal?
             <ModalAddTask setOpenModal={setOpenModal}/>
@@ -65,8 +52,7 @@ function Tasks() {
           <Task title="Find design" pending={false} date="Oct. 30, 2020" />
         </div>
 
-      </div>
-    </div>
+    </DropdownBox>
    );
 }
 

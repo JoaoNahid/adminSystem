@@ -1,3 +1,6 @@
+<?php 
+  include('./includes/autoLoad.inc.php');
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -8,8 +11,6 @@
 </head>
 <body>
   <?php 
-    include('./classes/test.class.php');
-    include('./classes/dbh.class.php');
     $testObj = new Test();
     $testObj->getUsers();
   ?>

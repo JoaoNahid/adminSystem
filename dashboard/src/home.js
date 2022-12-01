@@ -6,6 +6,7 @@ import Tasks from './components/tasksBox';
 import { Sidebar } from './components/Sidebar/sidebar';
 import Header from './components/header';
 import CadastroGranja from './pages/cadastrarGranja';
+import DropdownBox from './components/dropdownBox';
 
 export default function Home() {
   return (
@@ -16,11 +17,11 @@ export default function Home() {
           <Header />
           {/* <Dashboard /> */}
           {/* <Site /> */}
-          <CadastroGranja />
+          {/* <CadastroGranja /> */}
         </div>
         <div className="col-md-4">
           <div id="rightSidebar">
-            <Profile />
+            <Profile />            
             <Tasks />
           </div>
         </div>
